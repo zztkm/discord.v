@@ -91,7 +91,8 @@ pub fn (mut client Client) shard(guild_id string) &gateway.Shard {
 }
 
 pub fn (mut client Client) session_id(guild_id string) string {
-	return client.shard(guild_id).get_session_id()
+	mut shard := client.shard(guild_id) 
+	return shard.get_session_id()
 }
 
 // Needed for logging purposes

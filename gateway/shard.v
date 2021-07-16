@@ -2,7 +2,7 @@ module gateway
 
 import time
 import log
-import x.websocket
+import net.websocket
 import eventbus
 import gateway.packets
 
